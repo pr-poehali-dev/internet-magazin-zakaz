@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
+import { QRCodeSVG } from "qrcode.react";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/d85781b8-49e0-4cad-a113-b5350173befc/files/baa220d4-2f1c-4d2f-8cac-fba5fb8ce2c2.jpg";
 const BOUTIQUE_IMG = "https://cdn.poehali.dev/projects/d85781b8-49e0-4cad-a113-b5350173befc/files/bb8831fc-70d9-4e1b-b77d-28150cd38f5c.jpg";
@@ -380,6 +381,24 @@ export default function Index() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* QR CODE */}
+            <div className="mt-12 border border-[rgba(201,169,110,0.2)] p-6 flex items-center gap-6">
+              <div className="bg-white p-3 flex-shrink-0">
+                <QRCodeSVG
+                  value="https://MAISON-NOIR.RU"
+                  size={90}
+                  bgColor="#ffffff"
+                  fgColor="#0D0D0D"
+                  level="H"
+                />
+              </div>
+              <div>
+                <p className="font-body text-[0.6rem] tracking-[0.3em] uppercase gold-text mb-1">Наш сайт</p>
+                <p className="font-display text-lg text-cream mb-1">MAISON-NOIR.RU</p>
+                <p className="text-cream/40 text-xs font-light">Отсканируйте камерой телефона</p>
+              </div>
             </div>
           </div>
           <div>
